@@ -21,23 +21,23 @@ install_packages() {
 	fi
 }
 
-install_bash_theme() {
-	if ! command_exists git; then
-		echo "Git is not installed. Installing Git..."
-		sudo pacman -S --noconfirm git
-	fi
+# install_bash_theme() {
+# 	if ! command_exists git; then
+# 		echo "Git is not installed. Installing Git..."
+# 		sudo pacman -S --noconfirm git
+# 	fi
 
-	echo "Cloning Synth-Shell project..."
-	git clone --recursive https://github.com/andresgongora/synth-shell.git || {
-		echo "Failed to clone repo"
-		exit 1
-	}
+# 	echo "Cloning Synth-Shell project..."
+# 	git clone --recursive https://github.com/andresgongora/synth-shell.git || {
+# 		echo "Failed to clone repo"
+# 		exit 1
+# 	}
 
-	pushd synth-shell
-	chmod +x setup.sh
-	./setup.sh
-	popd
-}
+# 	pushd synth-shell
+# 	chmod +x setup.sh
+# 	./setup.sh
+# 	popd
+# }
 
 install_nvm_and_node() {
 	echo "Installing NVM..."
